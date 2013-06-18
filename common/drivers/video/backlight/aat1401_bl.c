@@ -59,9 +59,9 @@ static int backlight_mode=1;
 #elif defined(CONFIG_BACKLIGHT_LUISA)
 #define DIMMING_VALUE		1
 #elif defined(CONFIG_BACKLIGHT_TASSVE)
-#define DIMMING_VALUE		2
+#define DIMMING_VALUE		1
 #elif defined(CONFIG_BACKLIGHT_COOPERVE)
-#define DIMMING_VALUE		2
+#define DIMMING_VALUE		1
 #else
 #define DIMMING_VALUE		1
 #endif
@@ -149,62 +149,67 @@ struct brt_value brt_table_ktd[] = {
 };
 #elif defined(CONFIG_BACKLIGHT_TASSVE)
 struct brt_value brt_table_ktd[] = {
-	  { MIN_BRIGHTNESS_VALUE,  2 }, // Min pulse 31(33-2) by HW 
-	  { 37,  3 }, 
-	  { 45,  4 }, 
-	  { 53,  5 }, 
-	  { 61,  6 }, 
-	  { 69,  7 }, 
-	  { 76,  8 }, 
-	  { 84,  9 },
-	  { 92,  10 }, 
-	  { 100,  11 },  
-	  { 108,  12 }, 
-	  { 115,  13 },  
-	  { 123,  14 }, 
-	  { 131,  15 }, 	  
-	  { 139,  16 },
-	  { 147,  17 },//default value 16(33-17) 
-	  { 156,  18 },
-	  { 165,  19 },
-	  { 174,  20 },
-	  { 183,  21 }, 
-	  { 192,  22 }, 
-	  { 201,  23 },
-	  { 210,  24 },
-	  { 219,  25 },	  
-	  { 228,  26 }, 
-	  { 237,  27 },
-	  { 246,  28 }, 	  
-	  { MAX_BRIGHTNESS_VALUE,  29 }, // Max pulse 4(33-29) by HW
+	{ MIN_BRIGHTNESS_VALUE,  1 }, // Min pulse 27(33-6) by HW 
+	{ 30,  2 }, 
+	{ 39,  3 }, 
+	{ 48,  4 }, 
+	{ 57,  5 }, 
+	{ 66,  6 }, 
+	{ 75,  7 }, 
+	{ 84,  8 },  
+	{ 93,  9 }, 
+	{ 102,	10 }, 
+	{ 111,	11 },	
+	{ 120,	12 }, 
+	{ 129,	13 }, 
+	{ 138,  14 },//default value 21 (33-12) 
+	{ 147,	15 }, 
+	{ 155,  16 },
+	{ 163,	17 },  
+	{ 170,	18 },  
+	{ 178,	19 }, 
+	{ 186,  20 },
+	{ 194,  21 }, 
+	{ 202,  22 },
+	{ 210,	23 },  
+	{ 219,	24 }, 
+	{ 228,	25 }, 
+	{ 237,  26 },  
+	{ 246,	27 }, 
+	{ MAX_BRIGHTNESS_VALUE,  28 }, // Max pulse 7(33-26) by HW
+
 };
 #elif defined(CONFIG_BACKLIGHT_COOPERVE)
 struct brt_value brt_table_ktd[] = {
-   { MIN_BRIGHTNESS_VALUE,  2 }, // Min pulse 31(33-2) by HW 
-   { 40,  3 },  
-   { 50,  4 }, 
-   { 60,  5 }, 
-   { 69,  6 }, 
-   { 79,  7 }, 
-   { 89,  8 }, 
-   { 99,  9 }, 
-   { 108,  10 }, 
-   { 118,  11 }, 
-   { 128,  12 }, 
-   { 138,  13 }, 
-   { 147,  14 },  	//default value   
-   { 156,  15 },  
-   { 165,  16 }, 
-   { 174,  17 }, 
-   { 183,  18 },
-   { 192,  19 },
-   { 201,  20 }, 
-   { 210,  21 }, 
-   { 219,  22 }, 
-   { 228,  23 }, 
-   { 237,  24 },
-   { 246,  25 },
-   { MAX_BRIGHTNESS_VALUE,  26 }, // Max pulse 3(33-30) by HW
+	{ MIN_BRIGHTNESS_VALUE,  1 }, // Min pulse 27(33-6) by HW 
+	{ 30,  2 }, 
+	{ 39,  3 }, 
+	{ 48,  4 }, 
+	{ 57,  5 }, 
+	{ 66,  6 }, 
+	{ 75,  7 }, 
+	{ 84,  8 },  
+	{ 93,  9 }, 
+	{ 102,	10 }, 
+	{ 111,	11 },	
+	{ 120,	12 }, 
+	{ 129,	13 }, 
+	{ 138,  14 },//default value 21 (33-12) 
+	{ 147,	15 }, 
+	{ 155,  16 },
+	{ 163,	17 },  
+	{ 170,	18 },  
+	{ 178,	19 }, 
+	{ 186,  20 },
+	{ 194,  21 }, 
+	{ 202,  22 },
+	{ 210,	23 },  
+	{ 219,	24 }, 
+	{ 228,	25 }, 
+	{ 237,  26 },  
+	{ 246,	27 }, 
+	{ MAX_BRIGHTNESS_VALUE,  28 }, // Max pulse 7(33-26) by HW
+
 };
 #else
 struct brt_value brt_table_ktd[] = {
